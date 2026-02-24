@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mini University Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Mini University Portal</h2>
+
+    <!-- Add Student -->
+    <div class="section">
+        <h3>Add Student</h3>
+        <input type="number" id="studentId" placeholder="Student ID">
+        <input type="text" id="studentName" placeholder="Student Name">
+        <button onclick="addStudent()">Add Student</button>
+    </div>
+
+    <!-- Register Course -->
+    <div class="section">
+        <h3>Register Course</h3>
+        <input type="number" id="courseStudentId" placeholder="Student ID">
+        <input type="text" id="courseName" placeholder="Course Name">
+        <button onclick="registerCourse()">Register</button>
+    </div>
+
+    <div id="output"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

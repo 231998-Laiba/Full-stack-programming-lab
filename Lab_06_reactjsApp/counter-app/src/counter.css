@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+}
+
+.counter-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.counter-card {
+  background: white;
+  border-radius: 20px;
+  padding: 50px 60px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  min-width: 380px;
+}
+
+.counter-title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+.counter-display {
+  font-size: 6rem;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px auto;
+  transition: all 0.3s ease;
+}
+
+.counter-display.zero {
+  background: #f0f0f0;
+  color: #aaa;
+  border: 4px solid #ddd;
+}
+
+.counter-display.active {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: 4px solid #764ba2;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+}
+
+.counter-label {
+  color: #888;
+  font-size: 0.95rem;
+  margin-bottom: 35px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.button-group {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 0.5px;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-increment {
+  background: #28a745;
+  color: white;
+}
+
+.btn-increment:hover {
+  background: #218838;
+}
+
+.btn-decrement {
+  background: #dc3545;
+  color: white;
+}
+
+.btn-decrement:hover:not(:disabled) {
+  background: #c82333;
+}
+
+.btn-decrement:disabled {
+  background: #f5c6cb;
+  color: #999;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.btn-reset {
+  background: #ffc107;
+  color: #333;
+}
+
+.btn-reset:hover {
+  background: #e0a800;
+}
+
+.warning-text {
+  margin-top: 20px;
+  color: #dc3545;
+  font-size: 0.9rem;
+  font-weight: 500;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

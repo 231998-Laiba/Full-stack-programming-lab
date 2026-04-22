@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <div className="max-w-3xl mx-auto">
@@ -7,6 +9,22 @@ export default function Home() {
         <p className="text-blue-100 text-lg">
           A multi-page Next.js application built with Tailwind CSS.
         </p>
+      </div>
+
+      {/* Quick Links */}
+      <div className="flex gap-4 justify-center mb-8">
+        <Link
+          href="/products"
+          className="bg-white border border-blue-200 text-blue-600 hover:bg-blue-50 font-medium px-6 py-2.5 rounded-xl text-sm transition-colors"
+        >
+          Browse Products →
+        </Link>
+        <Link
+          href="/about"
+          className="bg-white border border-gray-200 text-gray-600 hover:bg-gray-50 font-medium px-6 py-2.5 rounded-xl text-sm transition-colors"
+        >
+          About Us
+        </Link>
       </div>
 
       {/* Feature Cards */}

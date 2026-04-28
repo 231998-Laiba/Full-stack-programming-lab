@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "lab_10full_stack_node_express_lab",
   "version": "1.0.0",
   "main": "index.js",
@@ -12,4 +13,9 @@
     "express": "^5.2.1"
   },
   "description": ""
+=======
+  "dependencies": {
+    "react-router-dom": "^7.13.1"
+  }
+>>>>>>> 21caaa68369656c25ed2b0c93677e0891412cb8c
 }

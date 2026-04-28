@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+}
+
+.actions-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  transition: background-color 0.6s ease;
+}
+
+.actions-card {
+  background: white;
+  border-radius: 24px;
+  padding: 50px 60px;
+  min-width: 480px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.actions-title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.actions-subtitle {
+  color: #888;
+  font-size: 0.95rem;
+  margin-bottom: 40px;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+/* Button Colors */
+.btn-message {
+  background: linear-gradient(135deg, #f093fb, #f5576c);
+}
+
+.btn-bg {
+  background: linear-gradient(135deg, #43c6ac, #00b4d8);
+}
+
+.btn-alert {
+  background: linear-gradient(135deg, #f7971e, #ffd200);
+}
+
+/* Message Box */
+.message-box {
+  background: #f0fff4;
+  border: 2px solid #28a745;
+  border-radius: 12px;
+  padding: 18px 24px;
+  margin-bottom: 25px;
+  animation: fadeIn 0.4s ease;
+}
+
+.message-box p {
+  color: #28a745;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+/* Event Info Box */
+.event-info {
+  background: #f8f9ff;
+  border: 2px solid #e0e4ff;
+  border-radius: 12px;
+  padding: 20px 25px;
+  text-align: left;
+}
+
+.event-info h3 {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.event-info ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.event-info ul li {
+  font-size: 0.92rem;
+  color: #666;
+}
+
+.event-info ul li span {
+  font-weight: 700;
+  color: #764ba2;
+  background: #f3e0ff;
+  padding: 2px 8px;
+  border-radius: 5px;
+  margin-right: 6px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

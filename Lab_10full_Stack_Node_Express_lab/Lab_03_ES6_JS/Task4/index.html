@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unique Course Registration - ES6</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Unique Course Registration System</h2>
+
+        <!-- Inline JS example -->
+         <button class="welcome-btn" onclick="alert('Welcome to Course Registration!')">
+    Click for Welcome
+         </button>
+        <div class="registration">
+            <input type="text" id="courseInput" placeholder="Enter course name">
+            <button onclick="addCourse()">Add Course</button>
+        </div>
+
+        <div class="result">
+            <p id="allCourses">Courses: </p>
+            <p id="totalCourses">Total Unique Courses: 0</p>
+        </div>
+        
+    </div>
+
+    <!-- Internal JS for demonstrating ES6 feature -->
+    <script>
+        // Example: let, const, arrow function
+        const message = () => "You can register multiple courses!";
+        let demoMessage = message();
+        console.log(demoMessage); // shows in console
+    </script>
+
+    <!-- External JS -->
+    <script src="script.js"></script>
+</body>
+</html>

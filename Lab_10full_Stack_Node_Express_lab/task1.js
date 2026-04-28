@@ -1,47 +1,78 @@
 const express = require('express');
 const app = express();
 
-// Student data stored in array
-const students = [
-    "Ali",
-    "Ahmed",
-    "Sara",
-    "Fatima",
-    "Hassan",
-    "Ayesha"
-];
+// PORT
+const PORT = 3000;
 
-// GET route to display student list
+app.listen(PORT, () => {
+    console.log(`Server running at http://localhost:${PORT}`);
+});
+// -----------------------------
+// Task 1: Student List (GET)
+// -----------------------------
+const students = ["Nida", "Ahmed", "Sara", "Ayesha"];
+
 app.get('/students', (req, res) => {
-    // Build HTML list items
-    let listItems = '';
-    for (let i = 0; i < students.length; i++) {
-        listItems += `<li>${students[i]}</li>`;
-    }
-
-    // Send full HTML response
+    let list = students.map(s => `<li>${s}</li>`).join('');
     res.send(`
+        <h1>Student List</h1>
+        <ul>${list}</ul>
+    `);
+});
+
+// -----------------------------
+// Task 2: Simple Routes
+// -----------------------------
+app.get('/home', (req, res) => {
+    res.send("<h1>Home Page</h1><p>Welcome Home</p>");
+});
+
+app.get('/about', (req, res) => {
+    res.send("<h1>About Page</h1><p>This is About Page</p>");
+});
+
+app.get('/contact', (req, res) => {
+    res.send("<h1>Contact Page</h1><p>Contact us here</p>");
+});
+
+// -----------------------------
+// Task 3: Dynamic User Route
+// -----------------------------
+app.get('/user/:name', (req, res) => {
+    const name = req.params.name;
+    res.send(`<h1>Hello ${name}</h1>`);
+});
+
+// -----------------------------
+// Task 4: Full HTML Page
+// -----------------------------
+app.get('/', (req, res) => {
+    res.send(`
+        <!DOCTYPE html>
         <html>
-            <head>
-                <title>Student List</title>
-                <style>
-                    body { font-family: Arial, sans-serif; margin: 40px; }
-                    h1 { color: #333; }
-                    ul { font-size: 18px; }
-                    li { margin: 10px 0; }
-                </style>
-            </head>
-            <body>
-                <h1>Student List</h1>
-                <ul>
-                    ${listItems}
-                </ul>
-            </body>
+        <head>
+            <title>My Express App</title>
+        </head>
+        <body>
+            <h1>Welcome to My Server</h1>
+            <p>This is a full HTML response from Express.</p>
+
+            <h3>Available Routes:</h3>
+            <ul>
+                <li>/students</li>
+                <li>/home</li>
+                <li>/about</li>
+                <li>/contact</li>
+                <li>/user/Nida</li>
+            </ul>
+        </body>
         </html>
     `);
 });
 
-// Start server
-app.listen(3000, () => {
-    console.log('Server running at http://localhost:3000/students');
+// -----------------------------
+// SERVER START
+// -----------------------------
+app.listen(PORT, () => {
+    console.log(`Server running at http://localhost:${PORT}`);
 });

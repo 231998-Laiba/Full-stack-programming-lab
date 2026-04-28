@@ -1,0 +1,13 @@
+.app-container {
+  text-align: center;
+  padding: 30px;
+  background-color: #f0f4f8;
+  min-height: 100vh;
+}
+
+.app-container h1 {
+  font-family: Arial, sans-serif;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}

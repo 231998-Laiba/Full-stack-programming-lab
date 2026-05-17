@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Box Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Color Box Generator</h1>
+
+        <!-- Color Inputs -->
+        <div class="inputs">
+
+            <input type="text" id="color1" placeholder="Enter first color">
+            <button onclick="addColorBox('color1')">Add Color 1</button>
+
+            <input type="text" id="color2" placeholder="Enter second color">
+            <button onclick="addColorBox('color2')">Add Color 2</button>
+
+            <input type="text" id="color3" placeholder="Enter third color">
+            <button onclick="addColorBox('color3')">Add Color 3</button>
+
+        </div>
+
+        <!-- Clear Button -->
+        <button id="clearBtn">Clear All Boxes</button>
+
+        <!-- Browser Info -->
+        <div class="info">
+            <p id="windowSize"></p>
+            <p id="browserInfo"></p>
+        </div>
+
+        <!-- Color Boxes Container -->
+        <div id="boxContainer"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
